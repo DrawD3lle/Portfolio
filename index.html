@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="Loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<!-- <div class="jumbotron jumbotron-fluid text-center">
+    <h1></h1>
+    </div> -->
+
 <!--Nav Bar -->
 <div class="wrapper">
   <nav class="tabs space-between">
@@ -61,13 +68,53 @@ $(document).ready(function(e){
   </nav>
 </div>
 <!-- End -->
-
     
+    
+    
+    
+    
+<div class="alert alert-primary" role="alert">Tell me what you think on twitter!</div>
+
 <div class="content">
     <div id="profile" class="page">
 <p class="name">Maxwell Edwards</p>
     <h1>About me</h1>
-        <cite>I've been into software development and graphic design for about 4 solid years now. I remember christmas day laying<br> my hands on my first PC, I was 11 years old and from that day on it put my future in stone.   </cite>
+        <div class="">I'm a Software Developer by Heart, I felt the need I had to code my own portfolio. I didn't have any such obiligation, I was even adviced that it would be <i>easier</i> not to. I still felt the need to code my own portfolio and hence why we are here. This is my portfolio, They're many like it but this one is mine.
+        
+            
+            <div class="row">
+            <div class="col-sm-3">
+<div class="card-header">
+    Certifications
+  </div>
+<ul class="list-group">
+  <li class="list-group-item">HTML</li>
+  <li class="list-group-item">JS</li>
+  <li class="list-group-item">CSS</li>
+  <li class="list-group-item">Photoshop</li>
+</ul>
+    </div>
+            <div class="col-sm-3">
+<div class="card-header">While Using</div>
+<ul class="list-group">
+  <li class="list-group-item">NodeJS</li>
+  <li class="list-group-item">Bootstrap</li>
+  <li class="list-group-item">SQL</li>
+  <li class="list-group-item">C#</li>
+</ul>
+            </div>
+                
+            <div class="col-sm-5">
+<div class="card-header">While Doing</div>
+<ul class="list-group">
+  <li class="list-group-item">Project Management</li>
+  <li class="list-group-item">Team Communication</li>
+  <li class="list-group-item">Daily Planning</li>
+  <li class="list-group-item">& Logo Design</li>
+</ul>
+</div>
+            </div></div>
+                
     </div>
     <div id="projects" class="page" style="display:none">
     <div class="projectheader">
@@ -78,43 +125,43 @@ $(document).ready(function(e){
         <li onclick="filterSelection('art')" class="btn">Art</li>
     </div>
     </div>
-   <div class="workContainer">     
-        <div class="filterDiv art">
+   <div class="workContainer row">     
+        <div class="filterDiv art col-sm-3">
         <img src="Fol.png" alt="" style="width:100%">
             <div class="card-box">
             <h4><b>Art</b></h4>
                 <p>Description</p>
             </div>
         </div>
-        <div class="filterDiv art">
+        <div class="filterDiv art col-sm-3">
         <img src="Fol.png" alt="" style="width:100%">
             <div class="card-box">
             <h4><b>Art 2</b></h4>
                 <p>Description</p>
             </div>
         </div>
-        <div class="filterDiv web">
+        <div class="filterDiv web col-sm-3">
         <img src="Fol.png" alt="" style="width:100%">
             <div class="card-box">
             <h4><b>Web1</b></h4>
                 <p>Description</p>
             </div>
         </div>
-       <div class="filterDiv web">
+       <div class="filterDiv web col-sm-3">
         <img src="Fol.png" alt="" style="width:100%">
             <div class="card-box">
             <h4><b>Web1</b></h4>
                 <p>Description</p>
             </div>
         </div>
-              <div class="filterDiv web">
+              <div class="filterDiv web col-sm-3">
         <img src="Fol.png" alt="" style="width:100%">
             <div class="card-box">
             <h4><b>Web1</b></h4>
                 <p>Description</p>
             </div>
         </div>
-              <div class="filterDiv web">
+              <div class="filterDiv web col-sm-3">
         <img src="Fol.png" alt="" style="width:100%">
             <div class="card-box">
             <h4><b>Web1</b></h4>
@@ -254,13 +301,29 @@ function showSlides(n) {
         <p>Feel Free to contact me with the contact information provided.</p>
         <dl>
             <dt>Email</dt>
-            <dd>myemail@gmail.com</dd>
-            <dt>Phone</dt>
-            <dd>330-000-0000</dd>
+            <dd>drawd3lle@gmail.com</dd>
+            
         </dl>
         
       
     </div>
 </div>
-</body>
+    
+    <div class="footer row fixed-bottom mx-auto">
+        <a href="https://twitter.com/drawd3lle" class="mx-auto" target="_blank">
+            <img src="./twitter.svg"  width="36" height="36" title="twitter">  
+        </a>
+        <a href="https://www.instagram.com/drawdelle/" class="mx-auto" target="_blank">
+            <img src="./instagram.svg"  width="36" height="36" title="instagram">
+        </a>
+        <a href="https://github.com/DrawD3lle?tab=repositories" class="mx-auto" target="_blank">
+            <img src="./github.svg" width="36" height="36" title="GitHub">
+        </a>
+    </div> 
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        </body>
 </html> 
