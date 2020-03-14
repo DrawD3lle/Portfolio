@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2{
+  margin:0px;
+  text-transform: uppercase;
+}
+
+h6{
+  margin:0px;
+  color:#777;
+}
+cite{
+}
+/*Navigation*/
+.wrapper{
+  /*  text-align:center; to center nav */
+    text-align: justify-all;
+    width: 100%;
+    display: inline-flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+.tabs{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size:15px;
+  list-style:none;
+  background:#fff;
+  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+  border-radius:50px;
+  position:relative;
+  width: 100%;
+}
+
+.tabs a{
+  text-decoration:none;
+  color: #777;
+  text-transform:uppercase;
+  padding:0px 20px;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  transition-duration:0.6s;
+}
+.tabs li{
+  text-decoration:none;
+  color: #777;
+  text-transform:uppercase;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  transition-duration:0.6s;
+
+}
+
+.tabs li.active a{
+  transition-delay: .7s;
+  color:#fff;
+}
+
+.tabs li a i{
+  margin-right:10px;
+}
+
+.tabs .selector{
+  height:100%;
+  display:inline-block;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:1;
+  border-radius:50px;
+  transition-duration:1s;
+  transition-timing-function: cubic-bezier(0.61, -0.55, 0.265, 1.2);
+  background: #bd3ffb;
+  background: -moz-linear-gradient(90deg, #bd3ffb 0%, #fc466b 100%);
+  background: -webkit-linear-gradient(90deg, #bd3ffb 0%,#fc466b 100%);
+  background: linear-gradient(90deg, #bd3ffb 0%,#fc466b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd3ffb', endColorstr='#fc466b',GradientType=1 );
+}
+/* Profile */
+.name{
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    right: 50px;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    
+}
+
+.content{
+  max-width: 75%;
+  margin-top: 50px;
+  padding: 70px 100px 100px 100px;
+  display: flex;
+  background:#fff;
+  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+  border-radius:50px;
+  position:relative;
+}
+
+/* Projects
+#projects{
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
+.projectheader{
+   position: static;  
+top: 0%;
+left: 50%; 
+
+}
+
+.header{
+    text-align: center;
+    margin-top: 0;
+    background-color: rgba(0,0,0,0.2);
+    color:white;
+    border-radius: 50px;
+  background: #bd3ffb;
+  background: -moz-linear-gradient(90deg, #bd3ffb 0%, #fc466b 100%);
+  background: -webkit-linear-gradient(90deg, #bd3ffb 0%,#fc466b 100%);
+  background: linear-gradient(90deg, #bd3ffb 0%,#fc466b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd3ffb', endColorstr='#fc466b',GradientType=1 );
+}
+
+.sidebar{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    text-transform: capitalize;
+    list-style: none;
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+}
+.sidebar li{
+    display: block;
+    text-align: center;
+    padding: 2px 10px;
+    width: 33%;
+}
+.sidebar li:hover{
+    background-color: grey;
+    color:white;
+}
+
+.workContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  overflow: hidden;
+ flex-direction: row;
+ overflow-y: scroll;
+
+}
+/* Card Design */
+.filterDiv {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  line-height: 10px;
+  margin: 10px;
+  text-align: center;
+  display: none;
+  padding: 2px 16px;
+  transition: 0.3s;
+  width: 25%;
+  flex-grow: 1/3;
+  position: relative;
+}
+.filterDiv:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.9);  
+}
+
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.activesort {
+  background-color: #666;
+  color: white;
+}
+/* Certifacations */
+.pdf{
+    width:716px;
+    height:554px;
+    overflow: hidden;
+    
+}
+.certTitle{
+    list-style: none;
+    background-color: rgba(0,0,0,0.9);
+    width: 90%;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.topleft {
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  font-size: 18px;
+}
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 30%, rgba(0,0,0,1) 50%);
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  padding: 0px 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: lightgray;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* active dot */
+.slideActive, .dot:hover {
+  background-color: #717171;
+}
+
+/*Overlay */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
