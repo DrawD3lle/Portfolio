@@ -28,7 +28,7 @@ function foo(response) {
   
   for(var i = 0; i < length; i++ ){
 var card = 
-" <div class='card work filterDiv col-sm-3' style='width: 18rem;'>" +
+" <div class='card web filterDiv col-sm-3' style='width: 18rem;'>" +
     "<img src=" + "'https://raw.githubusercontent.com/" + data[i].owner.login + "/" + data[i].name + "/master/icon.png'" + " class='card-img-top' alt='img'>" +
     "<div class='card-body'>" +
       "<h5 class='card-title'>" + data[i].name + "</h5>" +
@@ -157,7 +157,7 @@ $(document).ready(function(e){
         <div class="header">Projects</div>
         <div id="myBtnContainer" class="sidebar" style="">
         <li onclick="filterSelection('all')"class="btn activesort">All</li>
-        <li onclick="filterSelection('web')" class="btn">Web</li>
+        <li onclick="filterSelection('web')" class="btn">GitHub</li>
         <li onclick="filterSelection('art')" class="btn">Art</li>
     </div>
     </div>
