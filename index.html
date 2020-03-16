@@ -8,6 +8,41 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="Loader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+function foo(response) {
+  var data = response.data;
+ //console.log(meta);
+  console.log(data);
+  //length
+  var length = data.length;
+  //name
+  var name = data[0].name;
+  //url
+  var url = data[0].html_url;
+  //description
+  var description = data[0].description;
+  //owner
+  var owner = data[0].owner.login;
+  //img
+  var img = "https://raw.githubusercontent.com/" + data[0].owner.login + "/" + data[1].name + "/master/icon.png";
+  
+  for(var i = 0; i < length; i++ ){
+var card = 
+" <div class='card work filterDiv col-sm-3' style='width: 18rem;'>" +
+    "<img src=" + "'https://raw.githubusercontent.com/" + data[i].owner.login + "/" + data[i].name + "/master/icon.png'" + " class='card-img-top' alt='img'>" +
+    "<div class='card-body'>" +
+      "<h5 class='card-title'>" + data[i].name + "</h5>" +
+      "<p class='card-text'>" + data[i].description + "</p>" +
+      "<a href='" + data[i].html_url + "' class='btn btn-primary'>Open</a></div></div>";
+    document.getElementById('projectswork').innerHTML += card;  
+  }
+  
+}
+    var script = document.createElement('script');
+script.src = 'https://api.github.com/users/DrawD3lle/repos?callback=foo';
+
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>
 </head>
 <body>
 <!-- <div class="jumbotron jumbotron-fluid text-center">
@@ -126,50 +161,7 @@ $(document).ready(function(e){
         <li onclick="filterSelection('art')" class="btn">Art</li>
     </div>
     </div>
-   <div class="workContainer row">     
-        <div class="filterDiv art col-sm-3">
-        <img src="Fol.png" alt="" style="width:100%">
-            <div class="card-box">
-            <h4><b>Art</b></h4>
-                <p>Description</p>
-            </div>
-        </div>
-        <div class="filterDiv art col-sm-3">
-        <img src="Fol.png" alt="" style="width:100%">
-            <div class="card-box">
-            <h4><b>Art 2</b></h4>
-                <p>Description</p>
-            </div>
-        </div>
-        <div class="filterDiv web col-sm-3">
-        <img src="Fol.png" alt="" style="width:100%">
-            <div class="card-box">
-            <h4><b>Web1</b></h4>
-                <p>Description</p>
-            </div>
-        </div>
-       <div class="filterDiv web col-sm-3">
-        <img src="Fol.png" alt="" style="width:100%">
-            <div class="card-box">
-            <h4><b>Web1</b></h4>
-                <p>Description</p>
-            </div>
-        </div>
-              <div class="filterDiv web col-sm-3">
-        <img src="Fol.png" alt="" style="width:100%">
-            <div class="card-box">
-            <h4><b>Web1</b></h4>
-                <p>Description</p>
-            </div>
-        </div>
-              <div class="filterDiv web col-sm-3">
-        <img src="Fol.png" alt="" style="width:100%">
-            <div class="card-box">
-            <h4><b>Web1</b></h4>
-                <p>Description</p>
-            </div>
-        </div>
-</div> 
+   <div class="workContainer row" id="projectswork"></div> 
 
     <script>
 filterSelection("all")
